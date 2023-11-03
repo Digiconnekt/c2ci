@@ -1,28 +1,35 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
+import {
+  headerNavLinks,
+  mobLinkActiveClasses,
+  mobLinkDefaultClasses,
+  mobSubLinkActiveClasses,
+  mobSubLinkDefaultClasses,
+} from "./data";
 
 const MobileNav = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isServiceNavClicked, setIsServiceNavClicked] = useState(false);
-
-  const mobLinkDefaultClasses =
-    "block text-lg font-medium py-2 px-4 mb-4 rounded-md hover:text-white hover:bg-c-blue-dark transition-all";
-  const mobLinkActiveClasses =
-    "block text-lg font-medium py-2 px-4 mb-4 rounded-md text-white bg-c-blue-dark transition-all";
-
-  const mobSubLinkDefaultClasses =
-    "block text-md font-medium py-2 px-4 mb-4 rounded-md hover:text-white hover:bg-c-blue-dark transition-all";
-  const mobSubLinkActiveClasses =
-    "block text-md font-medium py-2 px-4 mb-4 rounded-md text-white bg-c-blue-dark transition-all";
 
   return (
     <>
       <div className="drawer drawer-end md:hidden">
-        <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+        <input
+          id="my-drawer-4"
+          type="checkbox"
+          className="drawer-toggle"
+          checked={isDrawerOpen}
+        />
         <div className="drawer-content">
           <label htmlFor="my-drawer-4" className="drawer-button">
-            <GiHamburgerMenu className="text-2xl ml-auto cursor-pointer" />
+            <GiHamburgerMenu
+              className="text-2xl ml-auto cursor-pointer"
+              onClick={() => setIsDrawerOpen(true)}
+            />
           </label>
         </div>
         <div className="drawer-side">
@@ -31,115 +38,75 @@ const MobileNav = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? mobLinkActiveClasses : mobLinkDefaultClasses
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about-us"
-                className={({ isActive }) =>
-                  isActive ? mobLinkActiveClasses : mobLinkDefaultClasses
-                }
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/services"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex items-center justify-between " +
-                      mobLinkActiveClasses
-                    : "flex items-center justify-between " +
-                      mobLinkDefaultClasses
-                }
-                onClick={() => setIsServiceNavClicked(!isServiceNavClicked)}
-              >
-                Services{" "}
-                <span className="text-sm transition-transform">
-                  {isServiceNavClicked ? <FaChevronUp /> : <FaChevronDown />}
-                </span>
-              </NavLink>
-              {isServiceNavClicked && (
-                <ul>
-                  <li>
-                    <NavLink
-                      to="/services/ai-ml"
-                      className={({ isActive }) =>
-                        isActive
-                          ? "flex items-center justify-between " +
-                            mobSubLinkActiveClasses
-                          : "flex items-center justify-between " +
-                            mobSubLinkDefaultClasses
-                      }
-                    >
-                      AI & ML
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/sap"
-                      className={({ isActive }) =>
-                        isActive
-                          ? "flex items-center justify-between " +
-                            mobSubLinkActiveClasses
-                          : "flex items-center justify-between " +
-                            mobSubLinkDefaultClasses
-                      }
-                    >
-                      SAP
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/blockchain"
-                      className={({ isActive }) =>
-                        isActive
-                          ? "flex items-center justify-between " +
-                            mobSubLinkActiveClasses
-                          : "flex items-center justify-between " +
-                            mobSubLinkDefaultClasses
-                      }
-                    >
-                      Blockchain
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/cloud-computing"
-                      className={({ isActive }) =>
-                        isActive
-                          ? "flex items-center justify-between " +
-                            mobSubLinkActiveClasses
-                          : "flex items-center justify-between " +
-                            mobSubLinkDefaultClasses
-                      }
-                    >
-                      Cloud Computing
-                    </NavLink>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <NavLink
-                to="/contact-us"
-                className={({ isActive }) =>
-                  isActive ? mobLinkActiveClasses : mobLinkDefaultClasses
-                }
-              >
-                Contact Us
-              </NavLink>
-            </li>
+          <ul className="relative p-4 pt-10 w-80 min-h-full bg-base-200 text-base-content">
+            {headerNavLinks.map((nav, i) =>
+              nav.subMenus ? (
+                <li key={i}>
+                  <NavLink
+                    to={nav.slug}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "flex items-center justify-between " +
+                          mobLinkActiveClasses
+                        : "flex items-center justify-between " +
+                          mobLinkDefaultClasses
+                    }
+                    onClick={() => {
+                      setIsServiceNavClicked(!isServiceNavClicked);
+                    }}
+                  >
+                    {nav.title}{" "}
+                    <span className="text-sm transition-transform">
+                      {isServiceNavClicked ? (
+                        <FaChevronUp />
+                      ) : (
+                        <FaChevronDown />
+                      )}
+                    </span>
+                  </NavLink>
+                  {isServiceNavClicked && (
+                    <ul className="pl-2 ml-2 border-l-2">
+                      {nav.subMenuLinks.map((subMenu, j) => (
+                        <li key={j}>
+                          <NavLink
+                            to={subMenu.slug}
+                            className={({ isActive }) =>
+                              isActive
+                                ? "flex items-center justify-between " +
+                                  mobSubLinkActiveClasses
+                                : "flex items-center justify-between " +
+                                  mobSubLinkDefaultClasses
+                            }
+                            onClick={() => setIsDrawerOpen(false)}
+                          >
+                            {subMenu.title}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <li key={i}>
+                  <NavLink
+                    to={nav.slug}
+                    className={({ isActive }) =>
+                      isActive ? mobLinkActiveClasses : mobLinkDefaultClasses
+                    }
+                    onClick={() => setIsDrawerOpen(false)}
+                  >
+                    {nav.title}
+                  </NavLink>
+                </li>
+              )
+            )}
+
+            <span
+              className="absolute top-4 right-5"
+              onClick={() => setIsDrawerOpen(false)}
+            >
+              <RxCross2 className="text-2xl" />
+            </span>
           </ul>
         </div>
       </div>
