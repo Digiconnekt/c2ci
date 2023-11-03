@@ -15,7 +15,7 @@ const MapAndFormSection = () => {
           <div className="col-span-12 lg:col-span-6 h-full hidden lg:block bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6998878.862801926!2d-105.36551738129808!3d31.07020547482923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864070360b823249%3A0x16eb1c8f1808de3c!2sTexas%2C%20USA!5e0!3m2!1sen!2sin!4v1699004697027!5m2!1sen!2sin"
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-[450px] lg:h-full"
@@ -62,7 +62,7 @@ const MapAndFormSection = () => {
           <div className="col-span-12 lg:col-span-6 h-full lg:hidden bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6998878.862801926!2d-105.36551738129808!3d31.07020547482923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864070360b823249%3A0x16eb1c8f1808de3c!2sTexas%2C%20USA!5e0!3m2!1sen!2sin!4v1699004697027!5m2!1sen!2sin"
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-[450px] lg:h-full"

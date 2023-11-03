@@ -8,6 +8,19 @@ const HeadingBanner = ({ title, links }) => {
         <h1 className="text-5xl font-bold text-c-black">{title}</h1>
 
         <ul className="flex items-center">
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-c-blue-dark font-semibold transition-all"
+                  : "text-gray-500 hover:text-c-blue-dark transition-all hover:font-semibold"
+              }
+            >
+              Home
+            </NavLink>
+            <span className="mx-1">/</span>
+          </li>
           {links?.map((link, i) => (
             <li key={i}>
               <NavLink
