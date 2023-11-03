@@ -1,3 +1,6 @@
+import { BsInstagram, BsWhatsapp, BsTwitter } from "react-icons/bs";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+
 export const headerNavLinks = [
   {
     title: "Home",
@@ -36,6 +39,34 @@ export const headerNavLinks = [
     title: "Contact Us",
     slug: "/contact-us",
     subMenus: false,
+  },
+];
+
+export const socialMediaLinks = [
+  {
+    icon: FaFacebookF,
+    bgColor: "from-blue-500 to-blue-700",
+    href: "/facebook",
+  },
+  {
+    icon: BsInstagram,
+    bgColor: "from-pink-500 to-purple-700",
+    href: "/instagram",
+  },
+  {
+    icon: FaLinkedinIn,
+    bgColor: "from-blue-400 to-blue-600",
+    href: "/linkedin",
+  },
+  {
+    icon: BsWhatsapp,
+    bgColor: "from-green-500 to-green-700",
+    href: "/whatsapp",
+  },
+  {
+    icon: BsTwitter,
+    bgColor: "from-blue-400 to-blue-500 to-white",
+    href: "/twitter",
   },
 ];
 

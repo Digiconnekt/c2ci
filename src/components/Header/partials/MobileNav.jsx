@@ -9,6 +9,7 @@ import {
   mobLinkDefaultClasses,
   mobSubLinkActiveClasses,
   mobSubLinkDefaultClasses,
+  socialMediaLinks,
 } from "./data";
 
 const MobileNav = () => {
@@ -23,6 +24,7 @@ const MobileNav = () => {
           type="checkbox"
           className="drawer-toggle"
           checked={isDrawerOpen}
+          onChange={() => {}}
         />
         <div className="drawer-content">
           <label htmlFor="my-drawer-4" className="drawer-button">
@@ -107,6 +109,20 @@ const MobileNav = () => {
             >
               <RxCross2 className="text-2xl" />
             </span>
+
+            {/* social icons */}
+            <ul className="flex items-center gap-2 mt-8">
+              {socialMediaLinks.map((link, i) => (
+                <li
+                  key={i}
+                  className={`bg-gradient-to-r  w-10 h-10 p-1 flex justify-center items-center rounded-full text-white ${link.bgColor}`}
+                >
+                  <NavLink to={link.href} target="_blank">
+                    <link.icon />
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
           </ul>
         </div>
       </div>
