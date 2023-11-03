@@ -111,7 +111,7 @@ const MobileNav = () => {
             </span>
 
             {/* social icons */}
-            <ul className="flex items-center gap-2 mt-8">
+            <ul className="flex items-center gap-2 pt-4 border-t-2">
               {socialMediaLinks.map((link, i) => (
                 <li
                   key={i}

@@ -5,9 +5,9 @@ import DesktopNav from "./partials/DesktopNav";
 const Header = () => {
   return (
     <>
-      <header className="sm:flex sm:justify-between py-3 px-4 border-b">
-        <div className="w-full max-w-7xl mx-auto">
-          <div className="sm:px-6 lg:px-8 flex h-16 items-center justify-between w-full">
+      <header className="sm:flex sm:justify-between py-3 border-b">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between w-full">
             <div className="flex items-center">
               <NavLink to="/">
                 <img
