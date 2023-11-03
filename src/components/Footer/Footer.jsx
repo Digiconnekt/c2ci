@@ -6,7 +6,7 @@ import { footerNavLinks } from "./partials/data";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-c-blue-light pt-4 md:pt-14 pb-4 md:pb-8">
+      <footer className="bg-c-blue-light pt-8 md:pt-14 pb-4 md:pb-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-12 gap-8">
           <div className="col-span-12 lg:col-span-6">
             <NavLink to="/" className="inline-block">
