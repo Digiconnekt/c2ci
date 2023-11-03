@@ -47,7 +47,7 @@ const Header = () => {
                   >
                     Home
                   </NavLink>
-                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all" />
+                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all duration-500" />
                 </li>
                 <li className="group">
                   <NavLink
@@ -58,7 +58,7 @@ const Header = () => {
                   >
                     About Us
                   </NavLink>
-                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all" />
+                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all duration-500" />
                 </li>
                 <li className="relative group">
                   <NavLink
@@ -76,9 +76,13 @@ const Header = () => {
                       {isServicesHover ? <FaChevronUp /> : <FaChevronDown />}
                     </span>
                   </NavLink>
-                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all" />
+                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all duration-500" />
 
-                  <ul className="absolute right-0 border-2 border-c-blue-light shadow-sm bg-white w-48 p-1 rounded-md hidden group-hover:block">
+                  <ul
+                    onMouseEnter={() => setIsServicesHover(true)}
+                    onMouseLeave={() => setIsServicesHover(false)}
+                    className="absolute right-0 border-2 border-c-blue-light shadow-sm bg-white w-48 p-1 rounded-md hidden group-hover:block"
+                  >
                     <li className="p-1 hover:bg-gray-50 rounded-md">
                       <NavLink
                         to="/services/ai-ml"
@@ -138,7 +142,7 @@ const Header = () => {
                   >
                     Contact Us
                   </NavLink>
-                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all" />
+                  <div className="w-0 group-hover:w-full h-[2px] bg-c-blue-dark transition-all duration-500" />
                 </li>
               </ul>
             </nav>
