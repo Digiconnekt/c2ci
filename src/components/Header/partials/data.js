@@ -65,7 +65,7 @@ export const socialMediaLinks = [
   },
   {
     icon: BsTwitter,
-    bgColor: "from-blue-400 to-blue-500 to-white",
+    bgColor: "from-blue-400 to-blue-500",
     href: "/twitter",
   },
 ];
