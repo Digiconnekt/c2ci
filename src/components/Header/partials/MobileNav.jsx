@@ -38,7 +38,7 @@ const MobileNav = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="relative p-4 pt-10 w-80 min-h-full bg-base-200 text-base-content">
+          <ul className="relative p-4 pt-12 w-80 min-h-full bg-base-200 text-base-content">
             {headerNavLinks.map((nav, i) =>
               nav.subMenus ? (
                 <li key={i}>
@@ -102,7 +102,7 @@ const MobileNav = () => {
             )}
 
             <span
-              className="absolute top-4 right-5"
+              className="absolute top-3 right-5"
               onClick={() => setIsDrawerOpen(false)}
             >
               <RxCross2 className="text-2xl" />
