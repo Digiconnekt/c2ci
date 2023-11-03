@@ -10,7 +10,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <main>
+      <main className=" pt-[88px]">
         <HeadingBanner title="Contact Us" links={headingBannerLinks} />
 
         <MapAndFormSection />
