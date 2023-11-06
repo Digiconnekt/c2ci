@@ -30,8 +30,8 @@ const WhatOurClientSays = () => {
 
         <div className="pt-8">
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
+            slidesPerView={1}
+            spaceBetween={15}
             pagination={{
               clickable: true,
             }}
@@ -40,6 +40,14 @@ const WhatOurClientSays = () => {
               disableOnInteraction: false,
             }}
             modules={[Pagination, Autoplay]}
+            breakpoints={{
+              1024: {
+                slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+            }}
             className="mySwiper whatOurCLientSays"
           >
             {whatOurClientSays.map((elem, i) => (

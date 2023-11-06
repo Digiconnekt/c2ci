@@ -14,13 +14,21 @@ const IndustryAssociation = () => {
 
           <div className="pt-8">
             <Swiper
-              slidesPerView={6}
+              slidesPerView={3}
               spaceBetween={30}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
+              breakpoints={{
+                1024: {
+                  slidesPerView: 6,
+                },
+                768: {
+                  slidesPerView: 4,
+                },
+              }}
               className="mySwiper industryAssociation"
             >
               {industryAssociations.map((elem, i) => (
