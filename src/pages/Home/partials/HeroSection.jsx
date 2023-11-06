@@ -20,10 +20,10 @@ const HeroSection = () => {
                 "Your Partner for Seamless IT Services",
                 1000,
               ]}
-              wrapper="span"
+              wrapper="h1"
               speed={50}
               repeat={Infinity}
-              className="text-5xl lg:text-7xl md:text-6xl font-bold leading-snug"
+              className="text-5xl lg:text-7xl md:text-6xl font-bold lg:leading-snug"
             />
           </div>
         </div>
