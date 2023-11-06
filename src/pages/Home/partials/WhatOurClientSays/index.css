@@ -1,0 +1,14 @@
+.whatOurCLientSays .swiper-pagination-fraction,
+.whatOurCLientSays .swiper-pagination-custom,
+.whatOurCLientSays
+  .swiper-horizontal
+  > .whatOurCLientSays
+  .swiper-pagination-bullets,
+.whatOurCLientSays .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -6px;
+}
+
+.whatOurCLientSays .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+}

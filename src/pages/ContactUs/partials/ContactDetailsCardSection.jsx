@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const ContactDetailsCardSection = () => {
   return (
     <>
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-12 justify-center items-center gap-y-10 md:gap-10">
           <div className="col-span-12 sm:col-span-6 lg:col-span-4 h-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 flex flex-col justify-center items-center rounded-2xl">
             <div className="w-12 h-12 flex justify-center items-center bg-c-blue-dark p-2 rounded-full">

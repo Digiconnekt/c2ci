@@ -1,4 +1,4 @@
-import HeadingBanner from "../../components/HeadingBanner/HeadingBanner";
+import HeadingBanner from "../../components/Headings/HeadingBanner";
 
 const AboutUs = () => {
   return (
