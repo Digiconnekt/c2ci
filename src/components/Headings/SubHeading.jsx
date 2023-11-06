@@ -3,7 +3,7 @@ const SubHeading = ({ subHeading, align }) => {
   return (
     <>
       <h3
-        className={`text-md mt-2 max-w-lg text-gray-500 
+        className={`text-md mt-2 max-w-2xl text-gray-500 
         ${
           align === "left"
             ? "mr-auto"

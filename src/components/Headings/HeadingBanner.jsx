@@ -2,17 +2,32 @@
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { NavLink, useLocation } from "react-router-dom";
 
-const HeadingBanner = ({ title }) => {
+const HeadingBanner = ({ title, img }) => {
   const Location = useLocation();
 
   const breadcrumbLinks = Location.pathname
     .split("/")
     .filter((link) => link !== "");
 
+  //
+
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-5 h-72 bg-c-blue-light">
-        <h1 className="text-5xl font-bold text-c-black">{title}</h1>
+      <div
+        style={{
+          backgroundImage: `url(${img})`,
+        }}
+        className={`flex flex-col justify-center items-center gap-5 h-72 ${
+          img ? "bg-no-repeat bg-cover" : "bg-c-blue-light"
+        }`}
+      >
+        <h1
+          className={`text-5xl font-bold ${
+            img ? "text-white" : "text-c-blue-dark"
+          } `}
+        >
+          {title}
+        </h1>
 
         <ul className="flex items-center">
           <li className="flex items-center">
@@ -20,14 +35,23 @@ const HeadingBanner = ({ title }) => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-c-blue-dark font-semibold transition-all"
-                  : "text-gray-500 hover:text-c-blue-dark transition-all hover:font-semibold"
+                  ? `${
+                      img ? "text-gray-300" : "text-c-blue-dark"
+                    }  font-semibold transition-all`
+                  : `${
+                      img
+                        ? "text-gray-400 hover:text-gray-300"
+                        : "text-gray-500 hover:text-c-blue-dark"
+                    } transition-all hover:font-semibold`
               }
             >
               <i>home</i>
             </NavLink>
             <span className="mx-1 mt-1">
-              <LiaAngleRightSolid size={12} />
+              <LiaAngleRightSolid
+                size={12}
+                className={`${img ? "text-gray-300" : "text-c-black"}`}
+              />
             </span>
           </li>
           {breadcrumbLinks?.map((link, i) => {
@@ -39,15 +63,21 @@ const HeadingBanner = ({ title }) => {
                   to={linkPath}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-c-blue-dark font-semibold transition-all"
-                      : "text-gray-500 hover:text-c-blue-dark transition-all hover:font-semibold"
+                      ? `${
+                          img ? "text-gray-300" : "text-c-blue-dark"
+                        }  font-semibold transition-all`
+                      : `${
+                          img
+                            ? "text-gray-400 hover:text-gray-300"
+                            : "text-gray-500 hover:text-c-blue-dark"
+                        } transition-all hover:font-semibold`
                   }
                 >
                   <i>{link}</i>
                 </NavLink>
                 {i < breadcrumbLinks.length - 1 && (
                   <span className="mx-1 mt-1">
-                    <LiaAngleRightSolid size={12} />
+                    className={`${img ? "text-gray-300" : "text-c-black"}`}
                   </span>
                 )}
               </li>

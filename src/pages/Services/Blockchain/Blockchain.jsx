@@ -1,4 +1,4 @@
-import HeadingBanner from "../../components/Headings/HeadingBanner";
+import HeadingBanner from "../../../components/Headings/HeadingBanner";
 
 const Blockchain = () => {
   return (

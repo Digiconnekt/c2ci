@@ -8,10 +8,10 @@ import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Services from "./pages/Services/Services";
 import ContactUs from "./pages/ContactUs/ContactUs";
-import AiMl from "./pages/Services/AiMl";
-import Sap from "./pages/Services/Sap";
-import Blockchain from "./pages/Services/Blockchain";
-import CloudComputing from "./pages/Services/CloudComputing";
+import AiMl from "./pages/Services/AiMl/AiMl";
+import Sap from "./pages/Services/Sap/Sap";
+import Blockchain from "./pages/Services/Blockchain/Blockchain";
+import CloudComputing from "./pages/Services/CloudComputing/CloudComputing";
 
 const router = createBrowserRouter([
   {
