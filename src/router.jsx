@@ -35,10 +35,6 @@ const router = createBrowserRouter([
         element: <AiMl />,
       },
       {
-        path: "/services/ai-ml",
-        element: <AiMl />,
-      },
-      {
         path: "/services/sap",
         element: <Sap />,
       },
