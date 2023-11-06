@@ -1,5 +1,7 @@
 import ButtonHeading from "../../../../components/Headings/ButtonHeading";
 import MainHeading from "../../../../components/Headings/MainHeading";
+import { fadeInBottom } from "../../../../helpers/framerMotion";
+import { motion } from "framer-motion";
 
 /* eslint-disable react/prop-types */
 const ContentLayout = ({ activeTab }) => {
@@ -44,7 +46,12 @@ const ContentLayout = ({ activeTab }) => {
 
   return (
     <>
-      <div className="grid grid-cols-12 items-center md:gap-10 gap-y-10 p-10">
+      <motion.div
+        variants={fadeInBottom}
+        initial="hidden"
+        whileInView="visible"
+        className="grid grid-cols-12 items-center md:gap-10 gap-y-10 p-10"
+      >
         <div className="col-span-12 lg:col-span-7 md:col-span-12">
           <ButtonHeading heading={content.title} align={"left"} />
 
@@ -57,7 +64,7 @@ const ContentLayout = ({ activeTab }) => {
         <div className="col-span-12 lg:col-span-5 md:col-span-12">
           <img src={content.img} alt={content.heading} />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -59,7 +59,7 @@ const WhatOurClientSays = () => {
                     </div>
                   </div>
                   <p className="text-sm text-justify mt-3 text-gray-500">
-                    <div className="flex mb-1">
+                    <span className="flex mb-1">
                       <BiSolidQuoteSingleLeft
                         size={24}
                         className="-ml-2 text-gray-200"
@@ -68,9 +68,9 @@ const WhatOurClientSays = () => {
                         size={24}
                         className="-ml-3 text-gray-200"
                       />
-                    </div>
+                    </span>
                     {elem.message}
-                    <div className="flex justify-end mt-1">
+                    <span className="flex justify-end mt-1">
                       <BiSolidQuoteSingleRight
                         size={24}
                         className="-ml-2 text-gray-200"
@@ -79,7 +79,7 @@ const WhatOurClientSays = () => {
                         size={24}
                         className="-ml-3 text-gray-200"
                       />
-                    </div>
+                    </span>
                   </p>
                   <h4 className="text-md font-bold text-center mt-3 text-c-black">
                     {elem.name}
