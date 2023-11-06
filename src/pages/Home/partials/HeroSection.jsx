@@ -1,5 +1,3 @@
-import { TypeAnimation } from "react-type-animation";
-
 const HeroSection = () => {
   return (
     <>
@@ -13,18 +11,9 @@ const HeroSection = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-white">
           <div className="max-w-5xl">
-            <TypeAnimation
-              sequence={[
-                "Your Partner for Seamless IT Solutions",
-                1000,
-                "Your Partner for Seamless IT Services",
-                1000,
-              ]}
-              wrapper="h1"
-              speed={50}
-              repeat={Infinity}
-              className="text-5xl lg:text-7xl md:text-6xl font-bold lg:leading-snug"
-            />
+            <h1 className="text-5xl lg:text-7xl md:text-6xl font-bold lg:leading-snug">
+              Your Partner for Seamless IT Solutions
+            </h1>
           </div>
         </div>
       </section>
