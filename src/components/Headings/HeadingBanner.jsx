@@ -9,8 +9,6 @@ const HeadingBanner = ({ title, img }) => {
     .split("/")
     .filter((link) => link !== "");
 
-  //
-
   return (
     <>
       <div
@@ -77,7 +75,10 @@ const HeadingBanner = ({ title, img }) => {
                 </NavLink>
                 {i < breadcrumbLinks.length - 1 && (
                   <span className="mx-1 mt-1">
-                    className={`${img ? "text-gray-300" : "text-c-black"}`}
+                    <LiaAngleRightSolid
+                      size={12}
+                      className={`${img ? "text-gray-300" : "text-c-black"}`}
+                    />
                   </span>
                 )}
               </li>
