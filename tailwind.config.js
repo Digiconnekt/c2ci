@@ -13,6 +13,9 @@ export default {
         "c-black": "#2D2D2D",
         "c-yellow": "#F9DD89",
       },
+      animation: {
+        "bounce-slow": "bounce 3s linear infinite",
+      },
     },
   },
   plugins: [require("daisyui")],
