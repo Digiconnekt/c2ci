@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const WhyChooseUsCards = () => {
   return (
     <>
-      <div className="py-8 max-w-5xl mx-auto grid grid-cols-12 items-center gap-y-10 sm:gap-10 overflow-hidden">
+      <div className="py-8 max-w-5xl mx-auto px-5 grid grid-cols-12 items-center gap-y-10 sm:gap-10 overflow-hidden">
         {whyChooseUs.map((elem, i) => (
           <motion.div
             key={i}
