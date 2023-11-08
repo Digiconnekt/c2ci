@@ -10,7 +10,7 @@ const ContactDetailsCardSection = () => {
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-12 justify-center items-center gap-y-10 md:gap-10">
           <motion.div
-            variants={fadeInBottom}
+            variants={fadeInBottom()}
             initial="hidden"
             whileInView="visible"
             className="col-span-12 sm:col-span-6 lg:col-span-4 h-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 flex flex-col justify-center items-center rounded-2xl"
@@ -26,7 +26,7 @@ const ContactDetailsCardSection = () => {
             </p>
           </motion.div>
           <motion.div
-            variants={fadeInBottom}
+            variants={fadeInBottom()}
             initial="hidden"
             whileInView="visible"
             className="col-span-12 sm:col-span-6 lg:col-span-4 h-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 flex flex-col justify-center items-center rounded-2xl"
@@ -40,7 +40,7 @@ const ContactDetailsCardSection = () => {
             </p>
           </motion.div>
           <motion.div
-            variants={fadeInBottom}
+            variants={fadeInBottom()}
             initial="hidden"
             whileInView="visible"
             className="col-span-12 sm:col-span-6 lg:col-span-4 h-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 flex flex-col justify-center items-center rounded-2xl"

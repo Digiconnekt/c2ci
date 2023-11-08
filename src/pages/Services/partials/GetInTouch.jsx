@@ -14,7 +14,7 @@ const GetInTouch = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 items-center md:gap-10 gap-y-10">
             <motion.div
-              variants={fadeInLeft}
+              variants={fadeInLeft()}
               initial="hidden"
               whileInView="visible"
               className="col-span-12 lg:col-span-6"
@@ -24,7 +24,7 @@ const GetInTouch = () => {
               </h2>
             </motion.div>
             <motion.div
-              variants={fadeInRight}
+              variants={fadeInRight()}
               initial="hidden"
               whileInView="visible"
               className="col-span-12 lg:col-span-6"

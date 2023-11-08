@@ -9,7 +9,7 @@ const WhyChooseUsCards = () => {
         {whyChooseUs.map((elem, i) => (
           <motion.div
             key={i}
-            variants={i === 0 ? fadeInLeft : i === 2 ? fadeInRight : null}
+            variants={i === 0 ? fadeInLeft() : i === 2 ? fadeInRight() : null}
             initial="hidden"
             whileInView="visible"
             className="col-span-12 sm:col-span-6 lg:col-span-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 rounded-2xl"

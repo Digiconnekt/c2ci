@@ -15,7 +15,7 @@ const MapAndFormSection = () => {
 
         <div className="grid grid-cols-12 items-center mt-8 gap-y-10 lg:gap-10">
           <motion.div
-            variants={fadeInLeft}
+            variants={fadeInLeft()}
             initial="hidden"
             whileInView="visible"
             className="col-span-12 lg:col-span-6 h-full hidden lg:block bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200"
@@ -29,7 +29,7 @@ const MapAndFormSection = () => {
             ></iframe>
           </motion.div>
           <motion.div
-            variants={fadeInRight}
+            variants={fadeInRight()}
             initial="hidden"
             whileInView="visible"
             className="col-span-12 lg:col-span-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] h-full p-8 rounded-xl"

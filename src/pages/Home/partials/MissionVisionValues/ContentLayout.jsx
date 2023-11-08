@@ -47,7 +47,7 @@ const ContentLayout = ({ activeTab }) => {
   return (
     <>
       <motion.div
-        variants={fadeInBottom}
+        variants={fadeInBottom()}
         initial="hidden"
         whileInView="visible"
         className="grid grid-cols-12 items-center md:gap-10 gap-y-10 p-10"
