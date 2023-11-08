@@ -14,11 +14,15 @@ import {
 
 const MobileNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isServiceNavClicked, setIsServiceNavClicked] = useState(false);
+  const [isLinkClicked, setIsLinkClicked] = useState("");
+
+  const linkClickHandler = (link) => {
+    isLinkClicked === link ? setIsLinkClicked("") : setIsLinkClicked(link);
+  };
 
   return (
     <>
-      <div className="drawer drawer-end md:hidden">
+      <div className="drawer drawer-end lg:hidden">
         <input
           id="my-drawer-4"
           type="checkbox"
@@ -54,19 +58,19 @@ const MobileNav = () => {
                           mobLinkDefaultClasses
                     }
                     onClick={() => {
-                      setIsServiceNavClicked(!isServiceNavClicked);
+                      linkClickHandler(i);
                     }}
                   >
                     {nav.title}{" "}
                     <span className="text-sm transition-transform">
-                      {isServiceNavClicked ? (
+                      {isLinkClicked === i ? (
                         <FaChevronUp />
                       ) : (
                         <FaChevronDown />
                       )}
                     </span>
                   </NavLink>
-                  {isServiceNavClicked && (
+                  {isLinkClicked === i && (
                     <ul className="pl-2 ml-2 border-l-2">
                       {nav.subMenuLinks.map((subMenu, j) => (
                         <li key={j}>

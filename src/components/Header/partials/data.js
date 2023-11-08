@@ -36,6 +36,17 @@ export const headerNavLinks = [
     ],
   },
   {
+    title: "Products",
+    slug: "/products",
+    subMenus: true,
+    subMenuLinks: [
+      {
+        title: "Parkeze",
+        slug: "/products/parkeze",
+      },
+    ],
+  },
+  {
     title: "Contact Us",
     slug: "/contact-us",
     subMenus: false,
