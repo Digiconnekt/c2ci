@@ -2,19 +2,19 @@ export const benefits = [
   {
     id: "01",
     img: "icon.png",
-    title: "Expertise",
-    text: "To provide our clients with the best solutions, our development team consists of certified professionals",
+    title: "Risk Mitigation",
+    text: "Better risk management through anomaly detection and fraud prevention.",
   },
   {
     id: "02",
     img: "icon.png",
-    title: "Process",
-    text: "We operate with efficient procedures, reciprocal openness, and proactive communication.",
+    title: "Market Insights",
+    text: "Real-time insights to improve competitive adaptability.",
   },
   {
     id: "03",
     img: "icon.png",
-    title: "Transparency",
-    text: "We committed to maintain the proper transparency throughout the project lifecycle.",
+    title: "Cost Savings",
+    text: "Identifying cost-saving opportunities and optimizing resource allocation.",
   },
 ];

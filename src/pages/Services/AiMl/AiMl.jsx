@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import ButtonHeading from "../../../components/Headings/ButtonHeading";
 import HeadingBanner from "../../../components/Headings/HeadingBanner";
@@ -8,7 +9,7 @@ import GetInTouch from "../partials/GetInTouch";
 import Benefits from "./partials/Benefits/Benefits";
 import { fadeInRight } from "../../../helpers/framerMotion";
 
-const ImgContentSectionContent = (
+const aiMlContent = (
   <>
     <motion.div variants={fadeInRight()} initial="hidden" whileInView="visible">
       <ButtonHeading heading={"AI & ML"} align={"left"} />
@@ -44,6 +45,32 @@ const ImgContentSectionContent = (
   </>
 );
 
+const unlockContent = (
+  <>
+    <motion.div variants={fadeInRight()} initial="hidden" whileInView="visible">
+      <ButtonHeading heading={"Unlock"} align={"left"} />
+      <MainHeading
+        heading={"Unlock the Future with Entransys"}
+        align={"left"}
+      />
+      <p className="mt-4 text-md">
+        Our AI and ML Services Promote Innovation, Effectiveness, and Success.
+        Boost your company's performance with data-driven insights, automation,
+        and customized solutions. Join us in shaping a smarter, more competitive
+        tomorrow.
+      </p>
+      <p className="mt-2 text-md">
+        Get in touch with Entransys today to learn how we can help you boost
+        your business to new heights.
+      </p>
+      <p className="mt-2 text-md">
+        Take a look at our Artificial Learning and Machine Learning services
+        today!
+      </p>
+    </motion.div>
+  </>
+);
+
 const AiMl = () => {
   return (
     <>
@@ -53,14 +80,20 @@ const AiMl = () => {
         <ImgContentSection
           title="AI & ML"
           img="https://img.freepik.com/free-vector/cute-artificial-intelligence-robot-isometric-icon_1284-63045.jpg?w=740&t=st=1699420449~exp=1699421049~hmac=e41b751ab97dcb224238a75cbf2eb96bd97ed6637d00ee3be59f1c31771d7109"
-          content={ImgContentSectionContent}
-          lgImgFirst={true}
-          smImgFirst={true}
+          content={aiMlContent}
+          firstDivClasses={"order-first"}
         />
 
         <Benefits />
 
         <GetInTouch />
+
+        <ImgContentSection
+          title="Unlock"
+          img="https://img.freepik.com/free-vector/cute-artificial-intelligence-robot-isometric-icon_1284-63045.jpg?w=740&t=st=1699420449~exp=1699421049~hmac=e41b751ab97dcb224238a75cbf2eb96bd97ed6637d00ee3be59f1c31771d7109"
+          content={unlockContent}
+          firstDivClasses={"order-last"}
+        />
       </main>
     </>
   );

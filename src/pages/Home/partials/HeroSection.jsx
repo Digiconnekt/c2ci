@@ -12,7 +12,8 @@ const HeroSection = () => {
         <div className="hero-content text-center text-white">
           <div className="max-w-5xl">
             <h1 className="text-5xl lg:text-7xl md:text-6xl font-bold lg:leading-snug">
-              Your Partner for Seamless IT Solutions
+              Empowering Your Digital Transformation with Cutting-Edge IT
+              Solutions
             </h1>
           </div>
         </div>

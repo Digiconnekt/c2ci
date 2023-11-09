@@ -1,5 +1,5 @@
-import { fadeInLeft, fadeInRight } from "../../../../helpers/framerMotion";
-import { whyChooseUs } from "./data";
+import { fadeInBottom } from "../../../../helpers/framerMotion";
+import { whyChooseUs } from "../../data";
 import { motion } from "framer-motion";
 
 const WhyChooseUsCards = () => {
@@ -9,10 +9,10 @@ const WhyChooseUsCards = () => {
         {whyChooseUs.map((elem, i) => (
           <motion.div
             key={i}
-            variants={i === 0 ? fadeInLeft() : i === 2 ? fadeInRight() : null}
+            variants={fadeInBottom()}
             initial="hidden"
             whileInView="visible"
-            className="col-span-12 sm:col-span-6 lg:col-span-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 rounded-2xl"
+            className="col-span-12 sm:col-span-6 lg:col-span-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 rounded-2xl h-full"
           >
             <elem.icon size={34} className="mx-auto text-c-blue-dark" />
             <h3 className="text-center text-lg text-c-black font-semibold mt-2 mb-1">
