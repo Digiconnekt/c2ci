@@ -15,6 +15,10 @@ export const footerNavLinks = [
         slug: "/services",
       },
       {
+        title: "Products",
+        slug: "/products",
+      },
+      {
         title: "Contact Us",
         slug: "/contact-us",
       },
@@ -42,19 +46,11 @@ export const footerNavLinks = [
     ],
   },
   {
-    title: "Company",
+    title: "Products",
     links: [
       {
-        title: "Privacy Policy",
-        slug: "/company/privacy-policy",
-      },
-      {
-        title: "FAQ's",
-        slug: "/company/faq",
-      },
-      {
-        title: "Help",
-        slug: "/company/help",
+        title: "Parkeze",
+        slug: "/products/parkeze",
       },
     ],
   },
