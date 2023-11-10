@@ -1,12 +1,47 @@
 import MainHeading from "../../../components/Headings/MainHeading";
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight } from "../../../helpers/framerMotion";
+import { useState } from "react";
+import axiosInstance from "../../../helpers/axiosInstance";
+import { VscLoading } from "react-icons/vsc";
+import toast from "react-hot-toast";
 
 const MapAndFormSection = () => {
-  const textInputClasses =
-    "text-sm input input-bordered w-full bg-[#F8FAFC] border-[#E7E5EA]";
-  const textareaInputClasses =
-    "textarea textarea-bordered w-full h-28 resize-none bg-[#F8FAFC] border-[#E7E5EA]";
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const formDataOnChangeHandler = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const formDataSubmitFn = async () => {
+    try {
+      setIsLoading(true);
+      await axiosInstance.post("/forms/contact", formData);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setErrors({});
+      toast.success("Message sent successfully!");
+    } catch (error) {
+      setErrors(error?.response?.data?.errors);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const formDataSubmitHandler = (e) => {
+    e.preventDefault();
+    formDataSubmitFn();
+  };
 
   return (
     <>
@@ -28,7 +63,8 @@ const MapAndFormSection = () => {
               className="w-full h-[450px] lg:h-full"
             ></iframe>
           </motion.div>
-          <motion.div
+          <motion.form
+            onSubmit={formDataSubmitHandler}
             variants={fadeInRight()}
             initial="hidden"
             whileInView="visible"
@@ -36,41 +72,87 @@ const MapAndFormSection = () => {
           >
             <div className="mb-7">
               <input
+                name="name"
                 type="text"
                 placeholder="Your Name"
-                className={textInputClasses}
+                className={`text-sm input input-bordered w-full bg-[#F8FAFC] ${
+                  errors?.name ? "border-red-500" : "border-[#E7E5EA]"
+                }`}
                 required
+                value={formData.name}
+                onChange={formDataOnChangeHandler}
               />
+              {errors?.name && (
+                <span className="mt-0.5 text-sm p-1 text-red-500">
+                  {errors.name[0]}
+                </span>
+              )}
             </div>
             <div className="mb-7">
               <input
+                name="phone"
                 type="text"
                 placeholder="Your Phone"
-                className={textInputClasses}
+                className={`text-sm input input-bordered w-full bg-[#F8FAFC] ${
+                  errors?.phone ? "border-red-500" : "border-[#E7E5EA]"
+                }`}
                 required
+                value={formData.phone}
+                onChange={formDataOnChangeHandler}
               />
+              {errors?.phone && (
+                <span className="mt-0.5 text-sm p-1 text-red-500">
+                  {errors.phone[0]}
+                </span>
+              )}
             </div>
             <div className="mb-7">
               <input
+                name="email"
                 type="text"
                 placeholder="Your Email"
-                className={textInputClasses}
+                className={`text-sm input input-bordered w-full bg-[#F8FAFC] ${
+                  errors?.email ? "border-red-500" : "border-[#E7E5EA]"
+                }`}
                 required
+                value={formData.email}
+                onChange={formDataOnChangeHandler}
               />
+              {errors?.email && (
+                <span className="mt-0.5 text-sm p-1 text-red-500">
+                  {errors.email[0]}
+                </span>
+              )}
             </div>
             <div className="mb-7">
               <textarea
-                className={textareaInputClasses}
+                name="message"
+                className={`textarea textarea-bordered w-full h-28 resize-none bg-[#F8FAFC] ${
+                  errors?.message ? "border-red-500" : "border-[#E7E5EA]"
+                }`}
                 placeholder="Your Message"
                 required
+                value={formData.message}
+                onChange={formDataOnChangeHandler}
               ></textarea>
+              {errors?.message && (
+                <span className="mt-0.5 text-sm p-1 text-red-500">
+                  {errors.message[0]}
+                </span>
+              )}
             </div>
             <div>
-              <button className="bg-c-blue-dark text-white w-full p-3 rounded-md shadow-xl hover:shadow-none transition-all">
+              <button
+                disabled={isLoading}
+                className={`bg-c-blue-dark text-white w-full p-3 rounded-md shadow-xl hover:shadow-none transition-all flex items-center justify-center gap-2 ${
+                  isLoading && "cursor-not-allowed opacity-70"
+                }`}
+              >
                 Submit
+                {isLoading && <VscLoading className="animate-spin" />}
               </button>
             </div>
-          </motion.div>
+          </motion.form>
         </div>
       </section>
 
