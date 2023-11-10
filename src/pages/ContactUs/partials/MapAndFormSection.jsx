@@ -26,13 +26,15 @@ const MapAndFormSection = () => {
   const formDataSubmitFn = async () => {
     try {
       setIsLoading(true);
-      await axiosInstance.post("/forms/contact", formData);
+      await toast.promise(axiosInstance.post("/forms/contact", formData), {
+        loading: "Sending message...",
+        success: "Message sent successfully!",
+        error: "Failed to send message. Please try again.",
+      });
       setFormData({ name: "", email: "", phone: "", message: "" });
       setErrors({});
-      toast.success("Message sent successfully!");
     } catch (error) {
       setErrors(error?.response?.data?.errors);
-      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
     }
