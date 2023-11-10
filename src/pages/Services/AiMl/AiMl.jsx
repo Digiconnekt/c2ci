@@ -20,7 +20,7 @@ const aiMlContent = (
         align={"left"}
       />
       <p className="mt-4 text-md">
-        Entransys is a pioneer in the fields of Artificial Learning and Machine
+        C2Ci is a pioneer in the fields of Artificial Learning and Machine
         Learning. Our team is made up of strong industry experts and data
         scientists. Using AL and ML to speed up innovation and change is a
         passion project for our team. In order to meet the specific needs of
@@ -49,10 +49,7 @@ const unlockContent = (
   <>
     <motion.div variants={fadeInRight()} initial="hidden" whileInView="visible">
       <ButtonHeading heading={"Unlock"} align={"left"} />
-      <MainHeading
-        heading={"Unlock the Future with Entransys"}
-        align={"left"}
-      />
+      <MainHeading heading={"Unlock the Future with C2Ci"} align={"left"} />
       <p className="mt-4 text-md">
         Our AI and ML Services Promote Innovation, Effectiveness, and Success.
         Boost your company's performance with data-driven insights, automation,
@@ -60,8 +57,8 @@ const unlockContent = (
         tomorrow.
       </p>
       <p className="mt-2 text-md">
-        Get in touch with Entransys today to learn how we can help you boost
-        your business to new heights.
+        Get in touch with C2Ci today to learn how we can help you boost your
+        business to new heights.
       </p>
       <p className="mt-2 text-md">
         Take a look at our Artificial Learning and Machine Learning services

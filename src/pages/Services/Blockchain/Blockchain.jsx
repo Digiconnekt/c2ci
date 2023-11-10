@@ -16,10 +16,10 @@ const blockchainContent = (
         align={"left"}
       />
       <p className="mt-4 text-md">
-        Contact Entransys Today Entransys is your partner in the blockchain
-        development journey. We are here to propel your company into the
-        decentralized future with our cutting-edge solutions. We are always
-        committed to our client’s success.
+        Contact C2Ci Today C2Ci is your partner in the blockchain development
+        journey. We are here to propel your company into the decentralized
+        future with our cutting-edge solutions. We are always committed to our
+        client’s success.
       </p>
     </motion.div>
   </>

@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
         <MainHeading heading={"Why Choose Us?"} align={"center"} />
         <SubHeading
           subHeading={
-            "Proven Track Record Entransys takes great pride in being at the cutting edge of blockchain innovation. As a blockchain services provider, we aim to accelerate your company's growth and change."
+            "Proven Track Record C2Ci takes great pride in being at the cutting edge of blockchain innovation. As a blockchain services provider, we aim to accelerate your company's growth and change."
           }
           align={"center"}
         />
