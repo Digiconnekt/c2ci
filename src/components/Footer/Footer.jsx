@@ -16,11 +16,14 @@ const Footer = () => {
                 className="max-w-[150px] w-full"
               />
             </NavLink>
-            <p className="lg:max-w-xl mt-3 text-md text-c-black">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae
-              necessitatibus quidem mollitia ad earum, voluptate non dolore
-              consectetur nesciunt possimus. ad earum, voluptate non dolore
-              consectetur nesciunt possimus.
+            <p className="lg:max-w-2xl mt-3 text-md text-c-black">
+              C2C Innovations (C2Ci Inc) is part of C2C Group which has been in
+              business for over 20 years. The C2C Group started with a domain
+              expertise in defense technology and has a strong track record of
+              continuously offering global market specialized military hardware
+              and software solutions. Today, C2C Group has branched into various
+              geographies and become domain agnostic with a deep focus on
+              innovation and technology which remains at our core.
             </p>
           </div>
           {footerNavLinks.map((nav, i) => (
