@@ -7,6 +7,21 @@ import WhatOurClientSays from "./partials/WhatOurClientSays/WhatOurClientSays";
 import SkilledDevelopers from "./partials/SkilledDevelopers/SkilledDevelopers";
 import OneLiner from "../../components/OneLiner/OneLiner";
 
+const oneLinerHeading = [
+  {
+    text: "We fuel your ideas and ",
+    color: "text-white",
+  },
+  {
+    text: "Boost your Business's Profitability ",
+    color: "text-orange-500",
+  },
+  {
+    text: "with our solutions",
+    color: "text-white",
+  },
+];
+
 const Home = () => {
   return (
     <>
@@ -25,22 +40,7 @@ const Home = () => {
 
         <SkilledDevelopers />
 
-        <OneLiner
-          heading={[
-            {
-              text: "We fuel your ideas and ",
-              color: "text-white",
-            },
-            {
-              text: "Boost your Business's Profitability ",
-              color: "text-orange-500",
-            },
-            {
-              text: "with our solutions",
-              color: "text-white",
-            },
-          ]}
-        />
+        <OneLiner heading={oneLinerHeading} />
 
         <WhatOurClientSays />
       </main>

@@ -1,5 +1,6 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { NavLink } from "react-router-dom";
 
 const counterData = [
   {
@@ -42,6 +43,15 @@ const NumCounter = () => {
                 </h4>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <NavLink
+              to="/contact-us"
+              className="inline-block text-center text-gray-100 border border-gray-300 p-5 rounded-lg hover:opacity-70 transition-all"
+            >
+              Fond of Numbers? Our Rates Await Your Call!
+            </NavLink>
           </div>
         </div>
       </section>
