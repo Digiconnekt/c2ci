@@ -9,8 +9,8 @@ const Features = () => {
         <MainHeading heading={"Features"} align={"center"} />
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-12 md:gap-10 gap-y-10">
-            <div className="col-span-6">
+          <div className="grid grid-cols-12 md:gap-10">
+            <div className="col-span-12 md:col-span-6">
               <div className="grid grid-cols-12 gap-y-10 py-10">
                 <motion.div
                   variants={fadeInBottom()}
@@ -52,8 +52,8 @@ const Features = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="col-span-6">
-              <div className="grid grid-cols-12 gap-y-10 py-10">
+            <div className="col-span-12 md:col-span-6">
+              <div className="grid grid-cols-12 gap-y-10 md:py-10">
                 <motion.div
                   variants={fadeInBottom()}
                   initial="hidden"
@@ -87,12 +87,12 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-12 md:gap-10 gap-y-10 pb-10">
+          <div className="grid grid-cols-12 md:gap-10 pb-10">
             <motion.div
               variants={fadeInBottom()}
               initial="hidden"
               whileInView="visible"
-              className="col-span-4 bg-c-blue-light p-10"
+              className="col-span-12 md:col-span-4 bg-c-blue-light p-10 mt-12 md:mt-0"
             >
               <img
                 src="../../../../../../images/products/parkeze/features/feature-6.png"
@@ -107,7 +107,7 @@ const Features = () => {
               variants={fadeInRight()}
               initial="hidden"
               whileInView="visible"
-              className="col-span-8 bg-c-blue-light"
+              className="col-span-8 hidden md:block"
             >
               <img
                 src="../../../../../../images/products/parkeze/features/features.png"
@@ -119,7 +119,7 @@ const Features = () => {
               variants={fadeInBottom()}
               initial="hidden"
               whileInView="visible"
-              className="col-span-4 bg-c-blue-light p-10"
+              className="col-span-12 md:col-span-4 bg-c-blue-light p-10 mt-12 md:mt-0"
             >
               <img
                 src="../../../../../../images/products/parkeze/features/feature-7.png"
@@ -133,7 +133,7 @@ const Features = () => {
               variants={fadeInBottom()}
               initial="hidden"
               whileInView="visible"
-              className="col-span-4 bg-c-blue-light p-10"
+              className="col-span-12 md:col-span-4 bg-c-blue-light p-10 mt-12 md:mt-0"
             >
               <img
                 src="../../../../../../images/products/parkeze/features/feature-8.png"
@@ -148,7 +148,7 @@ const Features = () => {
               variants={fadeInBottom()}
               initial="hidden"
               whileInView="visible"
-              className="col-span-4 bg-c-blue-light p-10"
+              className="col-span-12 md:col-span-4 bg-c-blue-light p-10 mt-12 md:mt-0"
             >
               <img
                 src="../../../../../../images/products/parkeze/features/feature-9.png"

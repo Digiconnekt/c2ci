@@ -21,7 +21,7 @@ const ManagedServices = () => {
               variants={fadeInBottom(i + 1)}
               initial="hidden"
               whileInView="visible"
-              className="col-span-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10 rounded-lg"
+              className="col-span-12 md:col-span-6 lg:col-span-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10 rounded-lg"
             >
               <img src={service.img} alt={service.title} className="mx-auto" />
               <h3 className="text-c-blue-dark text-xl font-semibold text-center mt-3">

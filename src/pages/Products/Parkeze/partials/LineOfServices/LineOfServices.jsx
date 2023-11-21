@@ -13,14 +13,14 @@ const LineOfServices = () => {
           {lineOfServices.map((service, i) =>
             i % 2 === 0 ? (
               <div key={i} className="grid grid-cols-12 items-center gap-y-10">
-                <div className="col-span-6">
+                <div className="col-span-12 sm:col-span-6 hidden sm:block">
                   <img
                     src={service.img}
                     alt={service.title}
                     className="w-full h-[400px] object-cover"
                   />
                 </div>
-                <div className="col-span-6 p-10 bg-c-blue-light h-full flex flex-col justify-center">
+                <div className="col-span-12 sm:col-span-6 p-10 bg-c-blue-light h-full flex flex-col justify-center">
                   <motion.div
                     variants={fadeInRight()}
                     initial="hidden"
@@ -35,7 +35,7 @@ const LineOfServices = () => {
               </div>
             ) : (
               <div key={i} className="grid grid-cols-12 items-center gap-y-10">
-                <div className="col-span-6 p-10 bg-gray-50 h-full flex flex-col justify-center">
+                <div className="col-span-12 sm:col-span-6 p-10 bg-gray-50 h-full flex flex-col justify-center">
                   <motion.div
                     variants={fadeInLeft()}
                     initial="hidden"
@@ -47,7 +47,7 @@ const LineOfServices = () => {
                     <p>{service.text}</p>
                   </motion.div>
                 </div>
-                <div className="col-span-6">
+                <div className="col-span-12 sm:col-span-6 hidden sm:block">
                   <img
                     src={service.img}
                     alt={service.title}
