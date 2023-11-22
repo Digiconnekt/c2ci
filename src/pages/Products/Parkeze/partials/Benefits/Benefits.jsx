@@ -16,9 +16,11 @@ const Benefits = () => {
               key={i}
               className="col-span-12 lg:col-span-4 md:col-span-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-10 rounded-lg transition-all duration-300 h-full"
             >
-              <div className="w-28 mx-auto">
-                <img src={benefit.icon} alt={benefit.heading} />
-              </div>
+              <img
+                src={`../../../../images/products/parkeze/benefits/${benefit.icon}`}
+                alt={benefit.heading}
+                className=" mx-auto"
+              />
               <h2 className="text-lg font-bold mt-3 text-c-blue-dark text-center">
                 {benefit.heading}
               </h2>

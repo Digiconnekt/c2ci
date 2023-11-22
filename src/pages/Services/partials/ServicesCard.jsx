@@ -13,8 +13,9 @@ const ServicesCard = () => {
           >
             <div className="w-28">
               <img
-                src="https://spanning.com/wp-content/uploads/2021/12/cloud-computing-icon.png"
+                src={`../../../../images/services/${service.img}`}
                 alt={service.name}
+                className="w-16"
               />
             </div>
             <h2 className="text-lg font-bold mt-3 text-c-blue-dark">
