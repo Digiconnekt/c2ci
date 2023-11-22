@@ -13,7 +13,6 @@ import Sap from "./pages/Services/Sap/Sap";
 import Blockchain from "./pages/Services/Blockchain/Blockchain";
 import CloudComputing from "./pages/Services/CloudComputing/CloudComputing";
 
-import Products from "./pages/Products/Products";
 import Parkeze from "./pages/Products/Parkeze/Parkeze";
 
 import ContactUs from "./pages/ContactUs/ContactUs";
@@ -50,10 +49,6 @@ const router = createBrowserRouter([
       {
         path: "/services/cloud-computing",
         element: <CloudComputing />,
-      },
-      {
-        path: "/products",
-        element: <Products />,
       },
       {
         path: "/products/parkeze",

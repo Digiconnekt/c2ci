@@ -15,10 +15,6 @@ export const footerNavLinks = [
         slug: "/services",
       },
       {
-        title: "Products",
-        slug: "/products",
-      },
-      {
         title: "Contact Us",
         slug: "/contact-us",
       },

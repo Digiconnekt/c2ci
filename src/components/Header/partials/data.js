@@ -37,7 +37,7 @@ export const headerNavLinks = [
   },
   {
     title: "Products",
-    slug: "/products",
+    slug: "#",
     subMenus: true,
     subMenuLinks: [
       {
