@@ -31,7 +31,7 @@ const AboutUs = () => {
   return (
     <>
       <ImgContentSection
-        img={"../../../../../images/home/about-us.jpg"}
+        img={"../../../../../images/home/about.jpg"}
         title={"About Us"}
         content={aboutusContent}
         firstDivClasses={"order-last lg:order-first"}

@@ -85,7 +85,7 @@ const AboutUs = () => {
         <HeadingBanner title="About Us" />
 
         <ImgContentSection
-          img={"../../../../../images/home/about-us.jpg"}
+          img={"../../../../../images/about-us/about-us.png"}
           title={"About Us"}
           content={aboutusContent}
           firstDivClasses={"order-last lg:order-first"}
@@ -94,7 +94,7 @@ const AboutUs = () => {
         <WhyChooseUs />
 
         <ImgContentSection
-          img={"../../../../../images/home/about-us.jpg"}
+          img={"../../../../../images/about-us/why-us.jpg"}
           title={"Why C2Ci"}
           content={whyC2ciContent}
           firstDivClasses={"order-last"}

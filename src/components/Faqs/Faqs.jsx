@@ -48,7 +48,7 @@ const Faqs = () => {
   return (
     <>
       <ImgContentSection
-        img={"../../../../../images/home/about-us.jpg"}
+        img={"../../../../../images/about-us/faq.jpg"}
         title={"Faq"}
         content={faqContent}
         firstDivClasses={"order-first"}
