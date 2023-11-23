@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import MainHeading from "../../../../../components/Headings/MainHeading";
 import { fadeInBottom } from "../../../../../helpers/framerMotion";
-import { industryFunctionalities } from "../data";
+import { consistentExperience } from "../data";
 
 const ConsistentExp = () => {
   return (
@@ -15,7 +15,7 @@ const ConsistentExp = () => {
         />
 
         <div className="grid grid-cols-12 items-center md:gap-10 gap-y-10 py-10">
-          {industryFunctionalities.map((elem, i) => (
+          {consistentExperience.map((elem, i) => (
             <motion.div
               key={i}
               variants={fadeInBottom()}
