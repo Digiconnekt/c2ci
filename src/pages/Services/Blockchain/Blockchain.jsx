@@ -117,7 +117,12 @@ const Blockchain = () => {
   return (
     <>
       <main className="pt-[88px]">
-        <HeadingBanner title="Blockchain" />
+        <HeadingBanner
+          title="Blockchain"
+          img={
+            "../../../../../images/services/blockchain/blockchain-banner.jpg"
+          }
+        />
 
         <ImgContentSection
           title="Blockchain"

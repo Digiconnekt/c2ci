@@ -82,7 +82,10 @@ const AboutUs = () => {
   return (
     <>
       <main className="pt-[88px]">
-        <HeadingBanner title="About Us" />
+        <HeadingBanner
+          title="About Us"
+          img={"../../../../../images/about-us/about-us-banner.jpg"}
+        />
 
         <ImgContentSection
           img={"../../../../../images/about-us/about-us.png"}

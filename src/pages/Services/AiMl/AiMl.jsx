@@ -72,7 +72,10 @@ const AiMl = () => {
   return (
     <>
       <main className="pt-[88px]">
-        <HeadingBanner title="AI & ML" />
+        <HeadingBanner
+          title="AI & ML"
+          img={"../../../../../images/services/ai-ml/ai-ml-banner.jpg"}
+        />
 
         <ImgContentSection
           title="AI & ML"

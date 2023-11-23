@@ -63,7 +63,12 @@ const CloudComputing = () => {
   return (
     <>
       <main className="pt-[88px]">
-        <HeadingBanner title="Cloud Computing" />
+        <HeadingBanner
+          title="Cloud Computing"
+          img={
+            "../../../../../images/services/cloud-computing/cloud-computing-banner.jpg"
+          }
+        />
 
         <ImgContentSection
           title="Cloud Computing"

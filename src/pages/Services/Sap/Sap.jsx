@@ -57,7 +57,10 @@ const Sap = () => {
   return (
     <>
       <main className="pt-[88px]">
-        <HeadingBanner title="SAP" />
+        <HeadingBanner
+          title="SAP"
+          img={"../../../../../images/services/sap/sap-banner.jpg"}
+        />
 
         <ImgContentSection
           title="AI & ML"
