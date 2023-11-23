@@ -21,32 +21,32 @@ export const benefits = [
 
 export const industryFunctionalities = [
   {
-    img: "../../../../../../images/services/icon.png",
+    img: "../../../../../../images/services/sap/industry-functionality/complete.png",
     title: "Complete Implementations",
     text: "Easily incorporate SAP solutions to meet your specific needs.",
   },
   {
-    img: "../../../../../../images/services/icon.png",
+    img: "../../../../../../images/services/sap/industry-functionality/migration.png",
     title: "Migration",
     text: "Skilfully oversee upgrades from SAP to HANA and legacy systems to ECC.",
   },
   {
-    img: "../../../../../../images/services/icon.png",
+    img: "../../../../../../images/services/sap/industry-functionality/ensure.png",
     title: "Ensure",
     text: "SAP systems receive OS and version updates.",
   },
   {
-    img: "../../../../../../images/services/icon.png",
+    img: "../../../../../../images/services/sap/industry-functionality/programme.png",
     title: "Programme and Change Management",
     text: "Manage SAP programmes effectively while guaranteeing user acceptance Advisory Services: Create SAP plans and roadmaps for your company.",
   },
   {
-    img: "../../../../../../images/services/icon.png",
+    img: "../../../../../../images/services/sap/industry-functionality/application.png",
     title: "Application Maintenance Services",
     text: "Dependable assistance via yearly maintenance agreements.",
   },
   {
-    img: "../../../../../../images/services/icon.png",
+    img: "../../../../../../images/services/sap/industry-functionality/audit.png",
     title: "Audit Services",
     text: "In-depth examinations to pinpoint areas for optimisation.",
   },

@@ -67,7 +67,7 @@ const Parkeze = () => {
         <HeadingBanner title="Parkeze" />
 
         <ImgContentSection
-          img={"../../../../../images/home/about-us.jpg"}
+          img={"../../../../../images/products/parkeze/parkeze.jpg"}
           title={"About Us"}
           content={parkezeContent}
           firstDivClasses={"order-first"}
@@ -80,7 +80,7 @@ const Parkeze = () => {
         <LineOfServices />
 
         <ImgContentSection
-          img={"../../../../../images/home/about-us.jpg"}
+          img={"../../../../../images/products/parkeze/unlock.jpg"}
           title={"Unlock"}
           content={unlockContent}
           firstDivClasses={"order-last"}

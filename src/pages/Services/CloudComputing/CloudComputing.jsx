@@ -13,9 +13,9 @@ const cloudComputingContent = (
   <>
     <motion.div variants={fadeInRight()} initial="hidden" whileInView="visible">
       <ButtonHeading heading={"Cloud Computing"} align={"left"} />
-      <MainHeading heading={"Contact c2ci Today"} align={"left"} />
+      <MainHeading heading={"Contact C2Ci Today"} align={"left"} />
       <p className="mt-4 text-md">
-        Build with c2ci now. Whether you need database storage, content
+        Build with C2Ci now. Whether you need database storage, content
         delivery, processing power, or other features, c2ci offers the services
         you need to create complex apps that are more dependable, flexible, and
         cost saving.
@@ -67,7 +67,9 @@ const CloudComputing = () => {
 
         <ImgContentSection
           title="Cloud Computing"
-          img="https://img.freepik.com/free-vector/cute-artificial-intelligence-robot-isometric-icon_1284-63045.jpg?w=740&t=st=1699420449~exp=1699421049~hmac=e41b751ab97dcb224238a75cbf2eb96bd97ed6637d00ee3be59f1c31771d7109"
+          img={
+            "../../../../../images/services/cloud-computing/cloud-computing.jpg"
+          }
           content={cloudComputingContent}
           firstDivClasses={"order-first"}
         />
@@ -78,7 +80,7 @@ const CloudComputing = () => {
 
         <ImgContentSection
           title="Unlock"
-          img="https://img.freepik.com/free-vector/cute-artificial-intelligence-robot-isometric-icon_1284-63045.jpg?w=740&t=st=1699420449~exp=1699421049~hmac=e41b751ab97dcb224238a75cbf2eb96bd97ed6637d00ee3be59f1c31771d7109"
+          img={"../../../../../images/services/cloud-computing/unlock.jpg"}
           content={unlockContent}
           firstDivClasses={"order-last"}
         />

@@ -121,7 +121,7 @@ const Blockchain = () => {
 
         <ImgContentSection
           title="Blockchain"
-          img="https://img.freepik.com/free-vector/cute-artificial-intelligence-robot-isometric-icon_1284-63045.jpg?w=740&t=st=1699420449~exp=1699421049~hmac=e41b751ab97dcb224238a75cbf2eb96bd97ed6637d00ee3be59f1c31771d7109"
+          img={"../../../../../images/services/blockchain/blockchain.jpg"}
           content={blockchainContent}
           firstDivClasses={"order-first"}
         />
@@ -132,7 +132,7 @@ const Blockchain = () => {
 
         <ImgContentSection
           title="Blockchain"
-          img="https://img.freepik.com/free-vector/cute-artificial-intelligence-robot-isometric-icon_1284-63045.jpg?w=740&t=st=1699420449~exp=1699421049~hmac=e41b751ab97dcb224238a75cbf2eb96bd97ed6637d00ee3be59f1c31771d7109"
+          img={"../../../../../images/services/blockchain/decentralised.jpg"}
           content={blockchainContent2}
           firstDivClasses={"order-last"}
         />
