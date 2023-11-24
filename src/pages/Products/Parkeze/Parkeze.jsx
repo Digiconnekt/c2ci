@@ -64,7 +64,10 @@ const Parkeze = () => {
   return (
     <>
       <main className="pt-[88px]">
-        <HeadingBanner title="Parkeze" />
+        <HeadingBanner
+          title="Parkeze"
+          img={"../../../../../images/services/services-banner.png"}
+        />
 
         <ImgContentSection
           img={"../../../../../images/products/parkeze/parkeze.jpg"}
